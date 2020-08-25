@@ -1,5 +1,4 @@
 import React from 'react';
-import Basket from './Basket';
 
 const BasketItem = ({ price, name }) => (
     <tr>
