@@ -1,21 +1,21 @@
 import React from 'react';
 
 const Basket = ({ items }) => (
-    <table className="table">
+    <table className="table table-striped">
         <thead className="thead-dark">
             <tr>
                 <th>Name</th>
                 <th>Price</th>
             </tr>
         </thead>
-        { items.map((item, index) => (
-            <tbody>
+        <tbody>
+            { items.map((item, index) => (            
                 <tr>
                     <td>{ item.name }</td>
                     <td>{ item.price }</td>
-                </tr> 
-            </tbody>           
-        ))}
+                </tr>                      
+            ))}
+        </tbody>  
     </table>
 );
 

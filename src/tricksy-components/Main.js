@@ -5,7 +5,7 @@ import Pagination from './Pagination';
 
 const Main = () => (
     <main className="col-md-8">
-        <Paragraph style = "lead"/>
+        <Paragraph stylish = "lead"/>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <Items />
         <Pagination />
