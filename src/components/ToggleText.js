@@ -10,7 +10,7 @@ class ToggleText extends Component {
     }
 
     handleClick() {
-        this.setState({ toggle: !this.state.toggle})
+        this.setState({ toggle: !this.state.toggle});
     }
 
     render() {

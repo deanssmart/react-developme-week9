@@ -4,13 +4,13 @@ class Counter extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { counter: this.props.initial};
+        this.state = { counter: props.initial};
 
         this.handleClickPos = this.handleClickPos.bind(this);
         this.handleClickNeg = this.handleClickNeg.bind(this);
     }
 
-    handleClickPos() {
+    handleClickPos() {   
         if(this.state.counter < this.props.max){
             let counter = this.state.counter + 1;
             this.setState({ counter: counter});

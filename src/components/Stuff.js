@@ -9,6 +9,7 @@ import Clicked from './Clicked';
 import ToggleText from './ToggleText';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
+import CatchMeIfYouCan from './CatchMeIfYouCan';
 
 const Stuff = ({ square }) => (
     <>
@@ -20,11 +21,13 @@ const Stuff = ({ square }) => (
                         { name: "Coffee", price: 2.10 },
                         { name: "Bananas", price: 3.50 },
                         { name: "Milk", price: 250.65 },
-                        { name: "The Great Milk Shortage by Simon Schama", price: 12.99 }] }/>
+                        { name: "The Great Milk Shortage by Simon Schama", price: 12.99 }
+                        ] }/>
         <Clicked />
         <ToggleText initial="Hello" alternate="World"/>   
         <Counter initial={ 50 } max={ 100 }/>        
-        <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>                      
+        <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>        
+        <CatchMeIfYouCan jump={ 100 } />              
     </>
 );
 

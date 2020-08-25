@@ -4,7 +4,7 @@ class StepCounter extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { counter: this.props.initial};
+        this.state = { counter: props.initial};
 
         this.handleClickPos = this.handleClickPos.bind(this);
         this.handleClickNeg = this.handleClickNeg.bind(this);
