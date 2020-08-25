@@ -12,7 +12,7 @@ const Stuff = ({ square }) => (
         <Header>Hello, World</Header>
         <Clicked /> 
         <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos.</Paragraph>
-        { square ? <Square colour = { "green" }/> : null }
+        { square ? <Square colour = { "hotpink" }/> : null }
         <People names = { ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/>
         <Basket items = {[
                         { name: "Coffee", price: 2.10 },
