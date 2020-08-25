@@ -10,6 +10,7 @@ import ToggleText from './ToggleText';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
+import RollCall from './RollCall';
 
 const Stuff = ({ square }) => (
     <>
@@ -27,7 +28,8 @@ const Stuff = ({ square }) => (
         <ToggleText initial="Hello" alternate="World"/>   
         <Counter initial={ 50 } max={ 100 }/>        
         <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>        
-        <CatchMeIfYouCan jump={ 100 } />              
+        <CatchMeIfYouCan jump={ 100 } /> 
+        <RollCall names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/>             
     </>
 );
 
