@@ -12,14 +12,17 @@ import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall';
 import Colours from '../tricksy-components/Colours';
+import Die from '../tricksy-components/Die';
 
 const Stuff = ({ square }) => (
     <>
         <Header>Hello, World</Header>
         <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos.</Paragraph>
         { square ? <Square colour={ "hotpink" }/> : null }
-        <Colours colours={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967"] }/>   
+        <Colours colours={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967"] }/> 
+        <Die sides={ 6 } />  
         <People names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/>
+        
         <Basket items={ [
                         { name: "Coffee", price: 2.10 },
                         { name: "Bananas", price: 3.50 },
@@ -32,6 +35,7 @@ const Stuff = ({ square }) => (
         <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>        
         <CatchMeIfYouCan jump={ 100 } /> 
         <RollCall names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/> 
+        
          
     </>
 );
