@@ -7,6 +7,7 @@ import People from './People';
 import Basket from '../tricksy-components/Basket';
 import Clicked from './Clicked';
 import ToggleText from './ToggleText';
+import Counter from './Counter';
 
 const Stuff = ({ square }) => (
     <>
@@ -20,7 +21,8 @@ const Stuff = ({ square }) => (
                         { name: "Milk", price: 250.65 },
                         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 }]}/>
         <Clicked />
-        <ToggleText initial="Hello" alternate="World"/>                                
+        <ToggleText initial="Hello" alternate="World"/>   
+        <Counter initial= { 50 } max= { 100 }/>                             
     </>
 );
 
