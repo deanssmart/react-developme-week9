@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const People = ({ names }) => (
-    <ul>
-        { names ? names.map((name, index) => (
-            <li key={ index }>
-                { name }
-            </li>
-        )) : "Nothing to see here"}
-    </ul>
-);
+class People extends Component {
+    
+    handleClick() {
+        console.log("Hello, world");
+    }
+
+    render() {
+        const { names } = this.props;
+
+        return (
+            names ? (
+                <ul className="list-group" onClick={ this.handleClick }>
+                    { names.map((name, i) => (
+                        <li className="list-group-item" key={ i }>{ name }</li>
+                    )) }
+                </ul>
+            ) : <p>Nothing to see here</p>
+        );        
+    }
+}
+
 
 export default People;
 
-// more semantically correct example
 
-// const People = ({ names }) => (
-//     names ? (
-//         <ul className="list-group">
-//             { names.map((name, i) => (
-//                 <li className="list-group-item" key={ i }>{ name }</li>
-//             )) }
-//         </ul>
-//     ) : <p>Nothing to see here</p>
-// );
 
