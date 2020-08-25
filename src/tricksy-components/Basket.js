@@ -1,4 +1,5 @@
 import React from 'react';
+import BasketItem from './BasketItem';
 
 const Basket = ({ items }) => (
     <table className="table table-striped">
@@ -9,11 +10,8 @@ const Basket = ({ items }) => (
             </tr>
         </thead>
         <tbody>
-            { items.map((item, index) => (            
-                <tr>
-                    <td>{ item.name }</td>
-                    <td>{ item.price }</td>
-                </tr>                      
+            { items.map((item, index) => (   
+                <BasketItem name={ item.name } price={ item.price } key={ index }/>                 
             ))}
         </tbody>  
     </table>
