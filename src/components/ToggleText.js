@@ -15,7 +15,8 @@ class ToggleText extends Component {
 
     render() {
         const { toggle } = this.state;
-        let text = toggle ? this.props.alternate : this.props.initial;
+        const { initial, alternate } = this.props;
+        let text = toggle ? alternate : initial;
 
         return (
             <div className="card">
