@@ -16,9 +16,11 @@ import Die from '../tricksy-components/Die';
 import LameGame from '../tricksy-components/LameGame';
 import GodCounter from './GodCounter';
 import TwoCounters from './TwoCounters';
+import LightBox from '../tricksy-components/LightBox';
 
 const Stuff = ({ square }) => (
     <>
+        <LightBox src={ "https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-funny-cat-pictures-5.jpg" } />
         <GodCounter />
         <TwoCounters />
         <Header>Hello, World</Header>
