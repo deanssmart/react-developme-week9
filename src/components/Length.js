@@ -4,7 +4,7 @@ class Length extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { input: "Hi" };
+        this.state = { input: "" };
 
         this.handleChange = this.handleChange.bind(this);
     }
@@ -19,7 +19,7 @@ class Length extends Component {
 
         return(
             <div className="form-group">
-                <label>{ label }</label>
+                <label className="lead">{ label }</label>
                 <input 
                     onChange={ this.handleChange }
                     name={ name }
