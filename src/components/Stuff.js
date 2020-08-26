@@ -18,11 +18,13 @@ import GodCounter from './GodCounter';
 import TwoCounters from './TwoCounters';
 import LightBox from '../tricksy-components/LightBox';
 import Length from './Length';
-import PeasswordStrength from './PasswordStrength';
+import PasswordStrength from './PasswordStrength';
+import TempConverter from './TempConverter';
 
 const Stuff = ({ square }) => (
     <>
-        <PeasswordStrength label={ "Password Challenge"} name={ "password" } /> 
+        <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } />
+        <PasswordStrength label={ "Password Challenge"} name={ "password" } /> 
         <Length label={ "Length Challenge"} name={ "length" } /> 
         <LightBox src={ "https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-funny-cat-pictures-5.jpg" } />
         <GodCounter />

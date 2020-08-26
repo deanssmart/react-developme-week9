@@ -31,7 +31,6 @@ class PasswordStrength extends Component {
         const { input } = this.state;
         const { label, name } = this.props;
 
-
         return(
             <div className="form-group">
                 <label className="lead">{ label }</label>
