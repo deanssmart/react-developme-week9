@@ -13,6 +13,7 @@ import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall';
 import Colours from '../tricksy-components/Colours';
 import Die from '../tricksy-components/Die';
+import LameGame from '../tricksy-components/LameGame';
 
 const Stuff = ({ square }) => (
     <>
@@ -35,7 +36,7 @@ const Stuff = ({ square }) => (
         <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>        
         <CatchMeIfYouCan jump={ 100 } /> 
         <RollCall names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/> 
-        
+        <LameGame aim={ 5 } />
          
     </>
 );

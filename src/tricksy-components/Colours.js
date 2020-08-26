@@ -10,12 +10,12 @@ class Colours extends Component {
     }
 
     handleClick() {
-        let { colours } = this.props;
+        const { colours } = this.props;
 
         let index = this.state.index === colours.length - 1 ? 0 : this.state.index + 1;
         
         this.setState({ index: index });                  
-                       
+        // can also write this as this.setState({ index }); as they have the same name                    
     }
 
     render() {

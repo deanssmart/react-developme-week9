@@ -12,15 +12,13 @@ class Counter extends Component {
 
     handleClickPos() {   
         if(this.state.counter < this.props.max){
-            let counter = this.state.counter + 1;
-            this.setState({ counter: counter});
+            this.setState({ counter: this.state.counter + 1});
         }            
     }
 
     handleClickNeg() {
         if(this.state.counter > 0){
-            let counter = this.state.counter - 1;
-            this.setState({ counter: counter});
+            this.setState({ counter: this.state.counter - 1});
         }
     }
 
@@ -31,8 +29,8 @@ class Counter extends Component {
         return (
             <div className="card row">
                 <p className="text-center">{ counter }</p>
-                <button className="btn btn-success"  onClick={ this.handleClickPos }>+</button>
-                <button className="btn btn-danger"  onClick={ this.handleClickNeg }>-</button>
+                <button className="btn btn-success" onClick={ this.handleClickPos }>+</button>
+                <button className="btn btn-danger" onClick={ this.handleClickNeg }>-</button>
             </div>
         );
     }

@@ -4,22 +4,20 @@ class RollCall extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { position: 0};
+        this.state = { position: 0 };
 
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        let { names } = this.props;
+        const { names } = this.props;
 
         let position = this.state.position === names.length - 1 ? 0 : this.state.position + 1;
         
-        this.setState({ position: position });                  
-                       
+        this.setState({ position: position });          
     }
 
-    render() {
- 
+    render() { 
         const { position } = this.state;
         const { names } = this.props;
 
