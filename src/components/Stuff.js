@@ -20,9 +20,11 @@ import LightBox from '../tricksy-components/LightBox';
 import Length from './Length';
 import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
+import List from './List';
 
 const Stuff = ({ square }) => (
     <>
+        <List />
         <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } />
         <PasswordStrength label={ "Password Challenge"} name={ "password" } /> 
         <Length label={ "Length Challenge"} name={ "length" } /> 
