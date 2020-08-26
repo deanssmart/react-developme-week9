@@ -17,6 +17,7 @@ import LameGame from '../tricksy-components/LameGame';
 import GodCounter from './GodCounter';
 import TwoCounters from './TwoCounters';
 import LightBox from '../tricksy-components/LightBox';
+import Length from './Length';
 
 const Stuff = ({ square }) => (
     <>
@@ -37,12 +38,13 @@ const Stuff = ({ square }) => (
                         { name: "The Great Milk Shortage by Simon Schama", price: 12.99 }
                         ] }/>
         <Clicked />
-        <ToggleText initial="Hello" alternate="World"/>   
+        <ToggleText initial={ "Hello" } alternate={ "World" } />   
         <Counter initial={ 50 } max={ 100 }/>        
         <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>        
         <CatchMeIfYouCan jump={ 100 } /> 
         <RollCall names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/> 
         <LameGame aim={ 5 } />
+        <Length label={ "Length Challenge"} name={ "length" } /> 
          
     </>
 );

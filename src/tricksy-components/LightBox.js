@@ -4,35 +4,54 @@ class LightBox extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { clicked: false };
+        this.state = { on: false };
 
-        this.handleClick = this.handleClick.bind(this);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleHide = this.handleHide.bind(this);
     }
 
-    componentDidUpdate() {
-        const { clicked } = this.state;
-
-        if(clicked === true){
-            window.addEventListener("click", this.handleClick);
-        }
+    componentDidMount() {
+        window.addEventListener("click", this.handleHide);
     }
 
-    handleClick() {
-        this.setState({ clicked: !this.state.clicked });
+    componentWillUnmount() {
+        window.removeEventListener("click", this.handleHide);
+    }
+
+    handleShow(e) {
+        e.stopPropagation();
+        this.setState({ on: true });
+    }
+
+    handleHide() {
+        this.setState({ on: false });
     }
 
     render() {
-        const { clicked } = this.state;
+        const { on } = this.state;
         const { src } = this.props;
+        const lightBoxStyle = {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "rgba(0, 0, 0, 0.85)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1,
+        };
 
         return (
-            <>
+            <div style={ on ? lightBoxStyle : {} }>
                 <img 
-                    onClick={ this.handleClick }
+                    onClick={ this.handleShow }
                     src={ src }                
-                    style={{ width: clicked ? "100%" : "20%" }}>
+                    style={{ width: on ? "" : "25%" }}
+                    alt= "mad cat">                    
                 </img>
-            </>
+            </div>
         );
     }
 }
