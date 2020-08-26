@@ -18,9 +18,12 @@ import GodCounter from './GodCounter';
 import TwoCounters from './TwoCounters';
 import LightBox from '../tricksy-components/LightBox';
 import Length from './Length';
+import PeasswordStrength from './PasswordStrength';
 
 const Stuff = ({ square }) => (
     <>
+        <PeasswordStrength label={ "Password Challenge"} name={ "password" } /> 
+        <Length label={ "Length Challenge"} name={ "length" } /> 
         <LightBox src={ "https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-funny-cat-pictures-5.jpg" } />
         <GodCounter />
         <TwoCounters />
@@ -44,8 +47,6 @@ const Stuff = ({ square }) => (
         <CatchMeIfYouCan jump={ 100 } /> 
         <RollCall names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/> 
         <LameGame aim={ 5 } />
-        <Length label={ "Length Challenge"} name={ "length" } /> 
-         
     </>
 );
 
