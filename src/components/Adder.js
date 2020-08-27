@@ -14,7 +14,8 @@ class Adder extends Component {
         this.setState({ input: e.currentTarget.value });
     }
 
-    handleClick() {
+    handleClick(e) {
+        e.preventDefault();
         const { input, list } = this.state;
 
         //input has a + infront of it to coerce it from a string to a number
@@ -34,24 +35,27 @@ class Adder extends Component {
 
         return(
             <>
-                <input 
-                    onChange={ this.handleChange }
-                    value={ input }
-                    className="form-control" 
+                <form className="form-group mt-4">
+                    <input 
+                        type="number"
+                        className="form-control"
+                        onChange={ this.handleChange }
+                        value={ input }
                     />
-                <button 
-                    onClick={ this.handleClick }
-                    className="btn btn-success"
+                    <button
+                        onClick={ this.handleClick }
+                        className="btn btn-primary mt-4"
                     >
-                    Add
-                </button>
-                <ul>
+                        Add
+                    </button>
+                </form>
+                <ul className="list-group">
                     { list.map((item, i) => (
                         <li className="list-group-item" key={ i }>{ item }</li>
-                    )) }                
+                    )) }
                 </ul>
-                <p>Sum: { this.calculator() }</p>
-            </>            
+                <p>Total: { this.calculator() }</p>
+            </>       
         );
     }
 }
