@@ -15,6 +15,9 @@ import { Link } from "react-router-dom";
                     <Link to="/wordy-stuff" className="nav-link">Wordy Stuff</Link>
                 </li>
                 <li className="nav-item">
+                    <Link to="/image-stuff" className="nav-link">Image Stuff</Link>
+                </li>                
+                <li className="nav-item">
                     <Link to="/my-app" className="nav-link">My App</Link>
                 </li>
             </ul>

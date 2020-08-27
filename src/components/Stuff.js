@@ -27,19 +27,26 @@ import Adder from './Adder';
 import Transform from './Transform';
 
 
-const Stuff = ({ square }) => (
+const Stuff = ({ square }) => {
+
+    const items = [
+        { name: "Coffee", price: 2.10 },
+        { name: "Bananas", price: 3.50 },
+        { name: "Milk", price: 250.65 },
+        { name: "The Great Milk Shortage by Simon Schama", price: 12.99 }];
+
+    const names = ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"];
+
+    const colours = ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967"];
+
+    return(
     <>
         <Route exact path="/">
             <CatchMeIfYouCan jump={ 100 } /> 
             <Header>Hello, World</Header>
             <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos.</Paragraph>
 
-            <Basket items={ [
-                        { name: "Coffee", price: 2.10 },
-                        { name: "Bananas", price: 3.50 },
-                        { name: "Milk", price: 250.65 },
-                        { name: "The Great Milk Shortage by Simon Schama", price: 12.99 }
-                        ] }/>
+            <Basket items={ items }/>
             <LameGame aim={ 5 } />
 
         </Route>
@@ -61,13 +68,13 @@ const Stuff = ({ square }) => (
             <List />
             <PasswordStrength label={ "Password Challenge"} name={ "password" } /> 
             <Length label={ "Length Challenge"} name={ "length" } /> 
-            <People names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/>
-            <RollCall names={ ["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"] }/> 
+            <People names={ names }/>
+            <RollCall names={ names }/> 
         </Route>  
         <Route path = '/image-stuff'>
-            <Colours colours={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967"] }/>  
-            <LightBox src={ "https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-funny-cat-pictures-5.jpg" } />
             <Square colour={ "hotpink" } />
+            <Colours colours={ colours }/>  
+            <LightBox src={ "https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-funny-cat-pictures-5.jpg" } />
         </Route>
         <Route path='/squares/:colour' render={ ({ match }) => (
             square ? <Square colour={ match.params.colour }/> : null
@@ -76,7 +83,8 @@ const Stuff = ({ square }) => (
             <StepCounter initial={ 50 } max={ match.params.max } step={ match.params.step }/>               
         )} />      
     </>
-);
+    );
+}
 
 Stuff.defaultProps = {
     square: true,
