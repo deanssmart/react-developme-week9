@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 
-class List extends Component {
+class Adder extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { list: [], input: "" };
+        this.state = { input: "", list: [] };
 
-        this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleChange(e) {
         this.setState({ input: e.currentTarget.value });
     }
 
-    handleClick() {        
-        const { list, input } = this.state;
-        if(input !== ""){        
-            this.setState({ list: [...list, input], input: ""});
+    handleClick() {
+        const { input, list } = this.state;
+
+        //input has a + infront of it to coerce it from a string to a number
+        if(input !== ""){     
+            this.setState({ list: [...list, +input], input: "" });
         }
+    }
+
+    calculator() {
+        const { list } = this.state;
+
+        return list.reduce((sum, value) => sum + value, 0);
     }
 
     render() {
@@ -40,12 +48,12 @@ class List extends Component {
                 <ul>
                     { list.map((item, i) => (
                         <li className="list-group-item" key={ i }>{ item }</li>
-                    )) }
+                    )) }                
                 </ul>
-            </>
+                <p>Sum: { this.calculator() }</p>
+            </>            
         );
     }
 }
 
-export default List;
-
+export default Adder;

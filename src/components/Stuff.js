@@ -21,9 +21,11 @@ import Length from './Length';
 import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import List from './List';
+import Adder from './Adder';
 
 const Stuff = ({ square }) => (
     <>
+        <Adder />
         <List />
         <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } />
         <PasswordStrength label={ "Password Challenge"} name={ "password" } /> 
