@@ -22,9 +22,13 @@ import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import List from './List';
 import Adder from './Adder';
+import Transform from './Transform';
 
 const Stuff = ({ square }) => (
     <>
+        <Transform transform={ (x => (x * x) / (7.8 + x / 2) + 1 * 3.6 / (x + 1) * x) }/>
+        <Transform transform={ x => x + 1 }/>
+        <Transform transform={ x => x * x }/>
         <Adder />
         <List />
         <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } />
