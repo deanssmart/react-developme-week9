@@ -25,7 +25,6 @@ class Transform extends Component {
                     onChange={ this.handleChange }
                     value={ input }
                     placeholder="Input value of x"
-
                 />
                 <p className="card card-body">{ transform.toString() } = { transform(+input) }</p>
             </>       
