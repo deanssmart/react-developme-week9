@@ -12,13 +12,13 @@ class StepCounter extends Component {
 
     handleClickPos() {
         if(this.state.counter < this.props.max){
-            this.setState({ counter: this.state.counter + this.props.step});
+            this.setState({ counter: this.state.counter + +this.props.step});
         }            
     }
 
     handleClickNeg() {
         if(this.state.counter > 0){
-            this.setState({ counter: this.state.counter - this.props.step});
+            this.setState({ counter: this.state.counter - +this.props.step});
         }
     }
 

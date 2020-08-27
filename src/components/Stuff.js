@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, Switch, Router } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import Header from './Header';
 import Paragraph from './Paragraph';
@@ -70,9 +70,11 @@ const Stuff = ({ square }) => (
             <Square colour={ "hotpink" } />
         </Route>
         <Route path='/squares/:colour' render={ ({ match }) => (
-                square ? <Square colour={ match.params.colour }/> : null
+            square ? <Square colour={ match.params.colour }/> : null
         )} />      
-
+        <Route path='/steps/:max/:step' render={ ({ match }) => (
+            <StepCounter initial={ 50 } max={ match.params.max } step={ match.params.step }/>               
+        )} />      
     </>
 );
 
