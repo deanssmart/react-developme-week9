@@ -27,6 +27,7 @@ import Adder from './Adder';
 import Transform from './Transform';
 import Progress from '../bootstrap-components/Progress';
 import CatchMeIfYouCanBoot from '../bootstrap-components/CatchMeIfYouCan';
+import PasswordStrengthBoot from '../bootstrap-components/PasswordStrength';
 
 
 const Stuff = ({ square }) => {
@@ -85,6 +86,7 @@ const Stuff = ({ square }) => {
         <Route path='/Bootstrap-stuff'>
             <Progress />
             <CatchMeIfYouCanBoot jump={ 100 }/>    
+            <PasswordStrengthBoot />
         </Route>      
     </>
     );

@@ -23,7 +23,7 @@ class CatchMeIfYouCan extends Component {
                 <Button
                     onClick={ this.handleClick }
                     style={{ position: "relative", top: position + "px" }}
-                    variant="primary">
+                    variant="success">
                     Catch Me!
                 </Button>
             </>
