@@ -26,6 +26,7 @@ import List from './List';
 import Adder from './Adder';
 import Transform from './Transform';
 import Progress from '../bootstrap-components/Progress';
+import CatchMeIfYouCanBoot from '../bootstrap-components/CatchMeIfYouCan';
 
 
 const Stuff = ({ square }) => {
@@ -58,10 +59,8 @@ const Stuff = ({ square }) => {
             <Transform transform={ (x => (x * x) / (7.8 + x / 2) + 1 * 3.6 / (x + 1) * x) }/>
             <Counter initial={ 50 } max={ 100 }/>        
             <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>
-            <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } /> 
-            
-            <TwoCounters />
-            
+            <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } />             
+            <TwoCounters />            
         </Route>
         <Route path='/wordy-stuff'>
             <Clicked />
@@ -84,7 +83,8 @@ const Stuff = ({ square }) => {
             <StepCounter initial={ 50 } max={ match.params.max } step={ match.params.step }/>               
         )} />
         <Route path='/Bootstrap-stuff'>
-            <Progress />    
+            <Progress />
+            <CatchMeIfYouCanBoot jump={ 100 }/>    
         </Route>      
     </>
     );
