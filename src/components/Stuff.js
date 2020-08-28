@@ -28,6 +28,7 @@ import Transform from './Transform';
 import Progress from '../bootstrap-components/Progress';
 import { CatchMeIfYouCan as CatchMeIfYouCanBoot } from '../bootstrap-components/CatchMeIfYouCan';
 import { PasswordStrength as PasswordStrengthBoot } from '../bootstrap-components/PasswordStrength';
+import { List as ListBoot } from '../bootstrap-components/List';
 
 
 const Stuff = ({ square }) => {
@@ -87,6 +88,7 @@ const Stuff = ({ square }) => {
             <Progress />
             <CatchMeIfYouCanBoot jump={ 100 }/>    
             <PasswordStrengthBoot />
+            <ListBoot />
         </Route>      
     </>
     );

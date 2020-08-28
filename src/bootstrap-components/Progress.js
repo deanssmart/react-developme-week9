@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ProgressBar } from 'react-bootstrap'
+import { Button, ProgressBar } from 'react-bootstrap';
 
 class Progress extends Component {
     constructor(props) {
