@@ -30,8 +30,8 @@ export class List extends Component {
         return(
             <>
                 <Form>
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
+                    <Form.Group controlId="formInput">
+                        <Form.Label>To Do List</Form.Label>
                         <Form.Control 
                             value={ input }
                             type="text"
