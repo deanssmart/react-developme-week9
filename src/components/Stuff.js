@@ -26,8 +26,8 @@ import List from './List';
 import Adder from './Adder';
 import Transform from './Transform';
 import Progress from '../bootstrap-components/Progress';
-import CatchMeIfYouCanBoot from '../bootstrap-components/CatchMeIfYouCan';
-import PasswordStrengthBoot from '../bootstrap-components/PasswordStrength';
+import { CatchMeIfYouCan as CatchMeIfYouCanBoot } from '../bootstrap-components/CatchMeIfYouCan';
+import { PasswordStrength as PasswordStrengthBoot } from '../bootstrap-components/PasswordStrength';
 
 
 const Stuff = ({ square }) => {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap'
 
-class CatchMeIfYouCan extends Component {
+export class CatchMeIfYouCan extends Component {
     constructor(props) {
         super(props);
 
@@ -31,4 +31,3 @@ class CatchMeIfYouCan extends Component {
     }
 }
 
-export default CatchMeIfYouCan;

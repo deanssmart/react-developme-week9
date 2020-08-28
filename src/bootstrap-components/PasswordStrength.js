@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 
-class PasswordStrength extends Component {
+export class PasswordStrength extends Component {
     constructor(props) {
         super(props);
 
@@ -46,5 +46,3 @@ class PasswordStrength extends Component {
         );
     }
 }
-
-export default PasswordStrength;
