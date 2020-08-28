@@ -25,6 +25,7 @@ import TempConverter from './TempConverter';
 import List from './List';
 import Adder from './Adder';
 import Transform from './Transform';
+import Progress from '../bootstrap-components/Progress';
 
 
 const Stuff = ({ square }) => {
@@ -45,12 +46,12 @@ const Stuff = ({ square }) => {
             <CatchMeIfYouCan jump={ 100 } /> 
             <Header>Hello, World</Header>
             <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Ubi ut eam caperet aut quando? Videmus igitur ut conquiescere ne infantes quidem possint. Magna laus. Bonum patria: miserum exilium. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos.</Paragraph>
-
             <Basket items={ items }/>
             <LameGame aim={ 5 } />
-
         </Route>
         <Route path='/number-stuff'>
+            <GodCounter />
+            <Die sides={ 6 } /> 
             <Adder />
             <Transform transform={ x => x + 1 }/>
             <Transform transform={ x => x * x }/>
@@ -58,9 +59,9 @@ const Stuff = ({ square }) => {
             <Counter initial={ 50 } max={ 100 }/>        
             <StepCounter initial={ 50 } max={ 100 } step={ 5 }/>
             <TempConverter labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } /> 
-            <GodCounter />
+            
             <TwoCounters />
-            <Die sides={ 6 } /> 
+            
         </Route>
         <Route path='/wordy-stuff'>
             <Clicked />
@@ -81,7 +82,10 @@ const Stuff = ({ square }) => {
         )} />      
         <Route path='/steps/:max/:step' render={ ({ match }) => (
             <StepCounter initial={ 50 } max={ match.params.max } step={ match.params.step }/>               
-        )} />      
+        )} />
+        <Route path='/Bootstrap-stuff'>
+            <Progress />    
+        </Route>      
     </>
     );
 }

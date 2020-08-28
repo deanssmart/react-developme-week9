@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
                     <Link to="/" className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
+                    <Link to="/my-app" className="nav-link">My App</Link>
+                </li>                
+                <li className="nav-item">
                     <Link to="/number-stuff" className="nav-link">Number Stuff</Link>
                 </li>
                 <li className="nav-item">
@@ -18,8 +21,8 @@ import { Link } from "react-router-dom";
                     <Link to="/image-stuff" className="nav-link">Image Stuff</Link>
                 </li>                
                 <li className="nav-item">
-                    <Link to="/my-app" className="nav-link">My App</Link>
-                </li>
+                    <Link to="/bootstrap-stuff" className="nav-link">Bootstrap Stuff</Link>
+                </li>                
             </ul>
         </footer>    
     );
