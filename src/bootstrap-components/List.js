@@ -36,11 +36,14 @@ export class List extends Component {
                             value={ input }
                             type="text"
                             placeholder="To Do"
-                            onChange={ this.handleChange } />
+                            onChange={ this.handleChange } 
+                        />
                         <Button
                             type= "submit"
                             onClick={ this.handleClick }
-                            variant="primary">
+                            variant="primary"
+                            className="mt-2"
+                        >
                             Add
                         </Button>                        
                     </Form.Group> 
