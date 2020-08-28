@@ -29,6 +29,7 @@ import Progress from '../bootstrap-components/Progress';
 import { CatchMeIfYouCan as CatchMeIfYouCanBoot } from '../bootstrap-components/CatchMeIfYouCan';
 import { PasswordStrength as PasswordStrengthBoot } from '../bootstrap-components/PasswordStrength';
 import { List as ListBoot } from '../bootstrap-components/List';
+import { TempConverter as TempConverterBoot } from '../bootstrap-components/TempConverter';
 
 
 const Stuff = ({ square }) => {
@@ -89,6 +90,7 @@ const Stuff = ({ square }) => {
             <CatchMeIfYouCanBoot jump={ 100 }/>    
             <PasswordStrengthBoot />
             <ListBoot />
+            <TempConverterBoot labelF={ "Fahrenheit"} nameF={ "fahrenheit" } labelC={ "Celsius"} nameC={ "celsius" } />
         </Route>      
     </>
     );
